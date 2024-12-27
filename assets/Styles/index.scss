@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     background: url(../images/bg.jpg) fixed center/cover;
     min-height : 100vh ;
@@ -13,15 +17,15 @@ ul {
     list-style: none;
 }
 header {
-    height: 490px;
+    min-height: 95vh;
     h1{
-        padding-top: 150px;
-        padding-bottom: 30px;
+        padding-top: 300px;
+        padding-bottom: 60px;
         margin: 0 auto;
-        font-size: 3rem;
+        font-size: 6rem;
         font-family: 'Inter' , serif;
         color: rgb(235, 228, 228);
-        width: 35%;
+        width: 45%;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -31,7 +35,7 @@ header {
         color: rgb(235, 228, 228);
         width: 60%;
         margin: 0 auto;
-        padding-bottom: 30px;
+        padding-bottom: 80px;
         font-family: Merriweather , serif;
         font-style:italic ;
     }
@@ -42,19 +46,25 @@ header {
         color: rgb(235, 228, 228);
         i{
             border: 2px solid rgb(235, 228, 228);
-            padding: 12px 15px;
+            padding: 18px 20px;
             border-radius: 100px;
             box-shadow: 0 0 2px 0px;
         }
     }
 }
 nav {
+    height: 5vh;
     display: grid;
     grid-template-columns: 70% 30%;
     background: rgba(235, 228, 228, 0.164);
     width: 75%;
     margin: 0 auto;
-    
+   .page{
+    &:hover li:not(:hover) {
+        background: none;
+        color: rgb(235, 228, 228);
+    }
+   } 
 .page ul {
     display: flex;
     margin: 0;
@@ -75,6 +85,11 @@ li{
     color: rgb(235, 228, 228);
     font-family: 'Inter' , serif;
     cursor: pointer;
+
+    &:first-child {
+        background: rgb(235, 228, 228);
+        color: black;
+    }
 }
 }
 .reseau{
@@ -90,7 +105,7 @@ li{
 color:rgb(235, 228, 228) ;
 cursor: pointer;
     :hover{
-        font-size: 1.5rem;
+        transform: scale(1.30);
     }
 }
     }    
@@ -124,6 +139,7 @@ main {
             
         }
     }
+   
     .part1{
        
         
@@ -165,7 +181,6 @@ main {
     box-shadow: 0 0 1px 0px;
     margin-bottom: 100px;
     cursor: pointer;
-    
  }   
 .part2 {
     display: grid;
@@ -257,7 +272,7 @@ footer{
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     width: 75%;
-    .footer-right {
+    .footer-left {
         width: 85%;
         margin: 0 auto;
         .name{
@@ -279,6 +294,7 @@ footer{
         input , textarea{
             background: none;
             border: 1px solid rgb(216, 215, 215);
+            resize: none;
             
         }
         label{
@@ -304,7 +320,7 @@ footer{
                 }
         }
     
-    .footer-left{
+    .footer-right{
         border-left: 1px solid rgb(216, 215, 215);
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
